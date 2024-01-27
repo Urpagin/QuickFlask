@@ -3,16 +3,12 @@
 container_name=my-container-name
 container_port=8000
 
-# Check if the container exists
-container_exists=$(sudo docker ps -a | grep $container_name)
-
 if sudo docker inspect $container_name &> /dev/null; then
     echo "Removing container: $container_name"
     sudo docker rm -f $container_name
 else
     echo "Container $container_name does not exist, skipping removal."
 fi
-
 
 # Build the new image
 sudo docker build -t $container_name:latest . || { echo "Build failed"; exit 1; }
