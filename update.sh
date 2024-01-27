@@ -1,7 +1,7 @@
 #!/bin/bash
 
-container_name=thing
-container_port=29344
+container_name=my-container-name
+container_port=8000
 
 # Check if the container exists
 container_exists=$(sudo docker ps -a | grep $container_name)
