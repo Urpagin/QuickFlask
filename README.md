@@ -1,3 +1,6 @@
+# Requirements
+Be sure to have **git** and **docker** (and *vim*) installed.
+
 # Step-by-step guide
 
 1. Clone the repo and go into the directory
